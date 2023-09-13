@@ -1,10 +1,61 @@
 .nav-bar {padding: 10px;
     background: #959090;
     color: white;
+    display: flex;
     
     }
     
     img {
-        width: 175px;         
-        height: 175px;
+        width: 125px;         
+        height: 125px;
+        border-radius: 50%;
+        flex-direction: column;
+        margin-top: 60px;
+        margin-right:250px;
         }
+    .allCircles {
+        display:flex;
+        
+    }
+    .circleBase {
+            border-radius: 50%;
+            Margin: 50px;
+            margin-top: 20px;
+          }
+    .circle1 {
+            width: 200px;
+            height: 200px;
+            background: #0d8d62;
+            border: 1px solid #000;
+            
+            
+          }
+          
+    .circle2 {
+            width: 200px;
+            height: 200px;
+            background: #0d8d62;
+            border: 1px solid #000;
+            
+          }
+    .circle3 {
+            width: 200px;
+            height: 200px;
+            background: #0d8d62;
+            border: 1px solid #000;
+            
+          }
+    .circle4 {
+            width: 200px;
+            height: 200px;
+            background: #0d8d62;
+            border: 1px solid #000;
+            
+          }
+    .circle5 {
+            width: 200px;
+            height: 200px;
+            background: #0d8d62;
+            border: 1px solid #000;
+            
+          }
