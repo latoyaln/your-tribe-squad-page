@@ -19,14 +19,18 @@
     }
     .circleBase {
             border-radius: 50%;
-            Margin: 50px;
+            Margin: 25px;
             margin-top: 20px;
+            text-align: center;
+            font-size: 35px;
+            line-height: 200px;
           }
     .circle1 {
             width: 200px;
             height: 200px;
             background: #0d8d62;
             border: 1px solid #000;
+            
             
             
           }
@@ -59,3 +63,11 @@
             border: 1px solid #000;
             
           }
+    .circle6 {
+            width: 200px;
+            height: 200px;
+            background: #0d8d62;
+            border: 1px solid #000;
+            
+          }
+   
