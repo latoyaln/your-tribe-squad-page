@@ -1,7 +1,11 @@
-.nav-bar {padding: 10px;
+.nav-bar {
     background: #959090;
     color: white;
     display: flex;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100vw;
     
     }
     
@@ -24,50 +28,9 @@
             text-align: center;
             font-size: 35px;
             line-height: 200px;
-          }
-    .circle1 {
             width: 200px;
             height: 200px;
             background: #0d8d62;
             border: 1px solid #000;
-            
-            
-            
           }
-          
-    .circle2 {
-            width: 200px;
-            height: 200px;
-            background: #0d8d62;
-            border: 1px solid #000;
-            
-          }
-    .circle3 {
-            width: 200px;
-            height: 200px;
-            background: #0d8d62;
-            border: 1px solid #000;
-            
-          }
-    .circle4 {
-            width: 200px;
-            height: 200px;
-            background: #0d8d62;
-            border: 1px solid #000;
-            
-          }
-    .circle5 {
-            width: 200px;
-            height: 200px;
-            background: #0d8d62;
-            border: 1px solid #000;
-            
-          }
-    .circle6 {
-            width: 200px;
-            height: 200px;
-            background: #0d8d62;
-            border: 1px solid #000;
-            
-          }
-   
+    
