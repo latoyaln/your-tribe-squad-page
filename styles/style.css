@@ -14,8 +14,8 @@
         height: 125px;
         border-radius: 50%;
         flex-direction: column;
-        margin-top: 60px;
-        margin-right:250px;
+        margin-top: 20px;
+        margin-right:450px;
         }
     .allCircles {
         display:flex;
@@ -26,11 +26,13 @@
             Margin: 25px;
             margin-top: 20px;
             text-align: center;
-            font-size: 35px;
-            line-height: 200px;
-            width: 200px;
-            height: 200px;
+            font-size: 20px;
+            line-height: 120px;
+            width: 125px;
+            height: 125px;
             background: #0d8d62;
             border: 1px solid #000;
           }
-    
+  .teamleden-circle2 { background-color: #000;
+
+  }
