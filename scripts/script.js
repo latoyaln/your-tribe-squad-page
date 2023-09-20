@@ -1,3 +1,6 @@
+const carouselContainers = document.querySelectorAll(".carousel-container");
+
+carouselContainers.forEach((container) =>{
 const carousel = document.querySelector(".carousel");
 const slides = document.querySelectorAll(".carousel-slide");
 const prevButton = document.querySelector(".prev-button");
@@ -32,3 +35,8 @@ prevButton.addEventListener("click", prevSlide);
 
 // Initial call to update the carousel
 updateCarousel();
+});
+
+
+
+
