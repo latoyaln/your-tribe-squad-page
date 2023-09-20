@@ -2,6 +2,46 @@ body {
   background-color: #f8fafc;
   margin: 0;
 }
+
+.nav-bar {
+  background: #959090;
+  color: white;
+  display: flex;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100vw;
+  }
+  
+  .logonav {
+      width: 125px;         
+      height: 125px;
+      border-radius: 50%;
+      flex-direction: column;
+      margin-top: 60px;
+      margin-right:250px;
+      }
+  .allCircles {
+      display:flex;
+      
+  }
+  .circleBase {
+          border-radius: 50%;
+          Margin: 25px;
+          margin-top: 20px;
+          text-align: center;
+          font-size: 35px;
+          line-height: 200px;
+          width: 200px;
+          height: 200px;
+          background: #0d8d62;
+          border: 1px solid #000;
+        }
+
+.squad1{
+  margin-top: 30rem;
+}
+
 .slider-wrapper {
   height: 80vh;
   display: flex;
@@ -57,139 +97,139 @@ body {
   visibility: visible; 
   opacity: 1; 
 }
+  
+ /*dit zorgt ervoor dat de container waar mijn visite kaartje in is een padding van 10 heeft*/
+.container-cardla {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  font-family: "Poppins" , sans-serif;;
+}
 
-/*dit zorgt ervoor dat de container waar mijn visite kaartje in is een padding van 10 heeft*/
-.container{
-    width: 100%;
-    min-height: 100vh;
-    padding: 10px;
-    
-  
-  }
-  
-  /*Hier zorg ik ervoor dat mijn visitekaartje zelf afgeronde hoeken heeft.
-  Ook heb ik een schaduw achter het visitekaartje om hem iets naar voor te brengen
-  Met transition zorg ik ervoor dat de kaart 1.5 seconde duurt om te flippen
-  Tranform style preserve 3d zorgt ervoor dat de kaart gepositioneert wordt in de 3d space 
-  en niet plat komt*/
-  .about{
-    width: 70%;
-    height: 70%;
-    background: #fff;
-    border-radius: 2em;
-    box-shadow: 0 0 20px 20px rgba(47, 103, 41, 0.1);
-    -webkit-transition: -webkit-transform 1.5s;
-    transition: transform 1.5s;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-  
-  /*De positie absolute zorgt ervoor dat positie absoluut zo blijft. Backface visibility
-  zorgt ervoor dat de achterkant ontzichtbaar blijft*/
-  .front, .back{
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    position: absolute;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  
-  /*Bij backround zorg ik ervoor dat mijn afbeelding als achtergrond komt.
-  Met display flex zorg ik ervoor dat de elementen in 1 lijn blijven
-  Met justify content zorg ik dsat de flex items lijnen aan de rechter eind*/
-  .front{
-    background-image: url("https://i.ibb.co/tb5BnBF/backgroundswirls.jpg");
-    background-size: cover;
-    background-position: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    
-  }
-  .front h1{
-    font-weight: 400;
-  }
-  .front p{
-    font-size: 0.7em;
-  }
-  .front .info{
-    padding: 0em 0em 1em 1em;
-    border-bottom-right-radius: 25px;
-    background-color: #004526;
-  }
-  /*Hier zorg ik ervoor dat mijn lijst items geen icons voor de tekst krijgen en op 1 lijn staan*/
-  .front ul{
-    list-style: none;
-    display: flex;
-    padding: 5px;
-  }
-  
-  .front li{
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .front li i{
-    padding-right: 15px;
-  }
-  /*Met transform rotate zorg ik ervoor dat het element rotate*/
-  .back{
-    background: #fff;
-    color: #333;
-    padding: 20px 40px;
-    transform: rotateY(180deg);
-    font-family: 'Poppins', sans-serif;
-  }
-  .back img{
-    max-width: 15%;
-  }
-  .back p{
-    font-size: 0.8em;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-  .back h1{
-    font-size: 1em;
-  }
-  .row{
-    display: flex;
-    align-items: center;
-  }
-  /*Hier kies ik ervoor om row en col te gebruiken om mijn tekst in 1 rij en column te zetten*/
-  .col{
-    flex: 1;
-    text-align: center;
-    color: #004526;
-    font-size: 0.6em;
-    position: relative;
-  }
-  /*Hier zet ik streepjes tussen de verschillende col elementen*/
-  .col::after{
-    content: '';
-    width: 0.1em;
-    height: 1em;
-    background: #004526;
-    position: absolute;
-    top: 0.4em;
-    right: 0;
-  }
-  /*Hier zorg ik ervoor dat naast het laatste element geen streepje is*/
-  .col:last-child::after{
-  display: none;
-  }
-  
-  /*flipt de kaart bij hover*/
-  
-  #slide-1:hover .about{
-    transform: rotateY(180deg);
-  }
+/*Hier zorg ik ervoor dat mijn visitekaartje zelf afgeronde hoeken heeft.
+Ook heb ik een schaduw achter het visitekaartje om hem iets naar voor te brengen
+Met transition zorg ik ervoor dat de kaart 1.5 seconde duurt om te flippen
+Tranform style preserve 3d zorgt ervoor dat de kaart gepositioneert wordt in de 3d space 
+en niet plat komt*/
+.about-cardla {
+  width: 50vw;
+  height: 43vh;
+  margin: 6em auto 0;
+  background: #fff;
+  border-radius: 2em;
+  box-shadow: 0 0 20px 20px rgba(47, 103, 41, 0.1);
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/*De positie absolute zorgt ervoor dat positie absoluut zo blijft. Backface visibility
+zorgt ervoor dat de achterkant ontzichtbaar blijft*/
+.cardla-front,
+.cardla-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/*Bij backround zorg ik ervoor dat mijn afbeelding als achtergrond komt.
+Met display flex zorg ik ervoor dat de elementen in 1 lijn blijven
+Met justify content zorg ik dsat de flex items lijnen aan de rechter eind*/
+.cardla-front {
+  background-image: url("https://i.ibb.co/tb5BnBF/backgroundswirls.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+.cardla-front h1 {
+  font-weight: 400;
+}
+.cardla-front p {
+  font-size: 0.7em;
+}
+.cardla-front .cardla-info {
+  padding: 0em 0em 1em 1em;
+  border-bottom-right-radius: 25px;
+  background-color: #004526;
+}
+/*Hier zorg ik ervoor dat mijn lijst items geen icons voor de tekst krijgen en op 1 lijn staan*/
+.cardla-front ul {
+  list-style: none;
+  display: flex;
+  padding: 5px;
+}
+
+.cardla-front li {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.cardla-front li i {
+  padding-right: 15px;
+}
+/*Met transform rotate zorg ik ervoor dat het element rotate*/
+.cardla-back {
+  background: #fff;
+  color: #333;
+  padding: 20px 40px;
+  transform: rotateY(180deg);
+}
+
+/* Styles for the flipped card */
+.about-cardla.flipped {
+  transform: rotateY(180deg);
+}
+
+.cardla-back img {
+  max-width: 15%;
+}
+.cardla-back p {
+  font-size: 0.8em;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.cardla-back p .talenln {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+/*Hier kies ik ervoor om row en col te gebruiken om mijn tekst in 1 rij en column te zetten*/
+.row h2 {
+  flex: 1;
+  text-align: center;
+  color: #004526;
+  font-size: 0.8em;
+  position: relative;
+}
+/*Hier zet ik streepjes tussen de verschillende col elementen*/
+.row h2:not(:last-child)::after {
+  content: "";
+  width: 0.1em;
+  height: 1em;
+  background: #004526;
+  position: absolute;
+  top: 0.4em;
+  right: 0;
+}
+/*flipt de kaart bij hover*/
+
+.container-cardla:hover .about-cardla {
+  transform: rotateY(180deg);
+}
 
   .card {
     position: relative;
