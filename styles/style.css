@@ -49,10 +49,6 @@ p:hover + .teamleden-circle2{
 
 }
 
-.allCircles p:hover{
-  display:none;
-}
-
 .teamleden-circle3 { 
   display: none;
   text-align: center;
@@ -63,3 +59,43 @@ p:hover + .teamleden-circle3{
   display: block;
 
 }
+
+.teamleden-circle4 { 
+  display: none;
+  text-align: center;
+  font-size: 15px;
+  
+}
+p:hover + .teamleden-circle4{
+  display: block;
+
+}
+
+.teamleden-circle5 { 
+  display: none;
+  text-align: center;
+  font-size: 15px;
+  
+}
+p:hover + .teamleden-circle5{
+  display: block;
+
+}
+
+.teamleden-circle6 { 
+  display: none;
+  text-align: center;
+  font-size: 15px;
+  
+}
+p:hover + .teamleden-circle6{
+  display: block;
+
+}
+
+.allCircles p:hover{
+  display:none;
+  
+}
+
+
