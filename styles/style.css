@@ -33,6 +33,17 @@
             background: #0d8d62;
             border: 1px solid #000;
           }
-  .teamleden-circle2 { background-color: #000;
-
+  .teamleden-circle2 { 
+    display: none;
+    
   }
+.circleBase circle2:hover + .teamleden-circle2{
+    display: block;
+
+}
+.teamname2:hover{
+    display: none;
+}
+.teamleden-circle2:hover{
+    display: block;
+}
