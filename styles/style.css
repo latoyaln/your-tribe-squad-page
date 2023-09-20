@@ -30,9 +30,10 @@
 }
 
 .carousel-slide img{
-  max-width: 50%;
+  max-width: 25%;
   height: auto;
   margin-left: 150px;
+  align-self: center;
 }
 
 .carousel-slide h1{
@@ -55,6 +56,7 @@
 .prev-button,
 .next-button {
   margin-top: 10px;
+  align-items: center;
 }
   
 
