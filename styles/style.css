@@ -6,6 +6,7 @@
     overflow: hidden;
     top: 0;
     width: 100vw;
+    margin:0;
     
     }
     
@@ -21,29 +22,32 @@
         display:flex;
         
     }
+    .teamname{
+      text-align: center;
+      line-height: 100px;
+    }
     .circleBase {
             border-radius: 50%;
             Margin: 25px;
-            margin-top: 20px;
-            text-align: center;
             font-size: 20px;
-            line-height: 120px;
             width: 125px;
             height: 125px;
             background: #0d8d62;
             border: 1px solid #000;
           }
+
+
+
   .teamleden-circle2 { 
     display: none;
+    text-align: center;
     
   }
-.circleBase circle2:hover + .teamleden-circle2{
+p:hover + .teamleden-circle2{
     display: block;
 
 }
-.teamname2:hover{
-    display: none;
-}
-.teamleden-circle2:hover{
-    display: block;
+
+.allCircles p:hover{
+  display:none;
 }
