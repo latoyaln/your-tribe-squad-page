@@ -41,6 +41,7 @@
   .teamleden-circle2 { 
     display: none;
     text-align: center;
+    font-size: 15px;
     
   }
 p:hover + .teamleden-circle2{
@@ -50,4 +51,15 @@ p:hover + .teamleden-circle2{
 
 .allCircles p:hover{
   display:none;
+}
+
+.teamleden-circle3 { 
+  display: none;
+  text-align: center;
+  font-size: 15px;
+  
+}
+p:hover + .teamleden-circle3{
+  display: block;
+
 }
