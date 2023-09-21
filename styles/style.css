@@ -1,115 +1,66 @@
-*{font-family: "Poppins", sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html, body {
+  height: 100%;
 }
 
 .nav-bar {
-    background: #223030;
-    color: #223030;
-    display: flex;
-    position: fixed;
-    overflow: hidden;
-    top: 0;
-    width: 100vw;
-    margin:0;
-    
-    }
-    /* image position and form*/
-    img {
-        width: 125px;         
-        height: 125px;
-        border-radius: 50%;
-        flex-direction: column;
-        margin-right:450px;
-        }
+  background: #223030;
+  color: #223030; /* Change text color to white */
+  display: flex;
+  justify-content: space-between; /* To align logo and circles at the ends */
+  align-items: center; /* To vertically center everything */
+  position: fixed;
+  top: 0;
+  left: 0; /* Set to 0 to make it full width */
+  right: 0; /* Set to 0 to make it full width */
+  padding: 10px 20px; /* Add padding for better spacing */
+}
 
-    .allCircles {
-        display:flex;
-        
-    }
-    /*teamnaam text position*/
-    .teamname{
-      text-align: center;
-      line-height: 100px;
-    }
-    /*circle position and form*/
-    .circleBase {
-            border-radius: 50%; 
-            Margin-right: 150px;
-            font-size: 20px;
-            width: 125px;
-            height: 125px;
-            background: #EFEFE9;
-            border: 1px solid #000;
-          }
+img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+}
+
+.allCircles {
+  display: flex;
+  align-items: center; /* Vertically center the circles */
+  gap: 20px; /* Add spacing between circles */
+}
+
+.circleBase {
+  border-radius: 50%;
+  font-size: 18px;
+  width: 125px;
+  height: 125px;
+  background: #EFEFE9;
+  border: 1px solid #E8D9CD;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center text horizontally */
+  justify-content: center; /* Center text vertically */
+  position: relative; /* Add relative positioning for .teamleden */
+}
 
 /*teamleden displayen als je hovert*/
 
-          .teamleden-circle1 { 
-            display: none;
-            text-align: center;
-            font-size: 15px;
-            line-height: 4px; 
-           
-            
-          }
-        p:hover + .teamleden-circle1{
-            display: block;
-        
-        }       
+.teamleden {
+  display: none;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
 
-
-  .teamleden-circle2 { 
-    display: none;
-    text-align: center;
-    font-size: 15px;
-    
-  }
-p:hover + .teamleden-circle2{
+p:hover + .teamleden{
     display: block;
-
-}
-
-.teamleden-circle3 { 
-  display: none;
-  text-align: center;
-  font-size: 15px;
-  
-}
-p:hover + .teamleden-circle3{
-  display: block;
-
-}
-
-.teamleden-circle4 { 
-  display: none;
-  text-align: center;
-  font-size: 15px;
-  
-}
-p:hover + .teamleden-circle4{
-  display: block;
-
-}
-
-.teamleden-circle5 { 
-  display: none;
-  text-align: center;
-  font-size: 15px;
-  
-}
-p:hover + .teamleden-circle5{
-  display: block;
-
-}
-
-.teamleden-circle6 { 
-  display: none;
-  text-align: center;
-  font-size: 15px;
-  
-}
-p:hover + .teamleden-circle6{
-  display: block;
 
 }
 
