@@ -32,6 +32,7 @@ img {
   display: flex;
   align-items: center; /* Vertically center the circles */
   gap: 20px; /* Add spacing between circles */
+
 }
 
 .circleBase {
@@ -70,3 +71,24 @@ p:hover + .teamleden{
 }
 
 
+  /*this shows the circles in mobile*/
+@media screen and (max-width:768px) {
+  
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .allCircles {
+    gap: 2px;
+  }
+  .circleBase { width: 50px;
+    height: 50px;
+    font-size: 7px;
+  }
+
+  .teamleden {font-size: 7px;
+
+  }
+}
