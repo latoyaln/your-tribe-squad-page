@@ -5,134 +5,357 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FDND Squadpage</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   </head>
+<body>
+  <nav class="nav-bar">
+        <div class="logo"> 
+          <img src="assets/logo pixel crafters.png" alt="logo"></div>
+         <section class="allCircles">
+          <a href="#pixel"> <article class="circleBase circle1">
+            <p class="teamname"> Pixelcrafters </p>  
+            <div class="teamleden"> 
+              <p>Belkacem<p>
+              <p>Latoya</p> 
+              <p>Tessa</p>
+            </div>
+          </article>
+          </a>
 
-  <!--Nav bar-->
-  <body>
-    <div class="nav-bar">
-      <div class="logo">
-        <img src="assets/logo pixel crafters.png" alt="logo" class="logonav" />
-      </div>
-      <section class="allCircles">
-        <article class="circleBase circle1">Pixelcrafters</article>
-        <article class="circleBase circle2">Pokemon Go Squad</article>
-        <article class="circleBase circle3">RuMoKaYa</article>
-        <article class="circleBase circle4">MJSS</article>
-        <article class="circleBase circle5">Slay</article>
-        <article class="circleBase circle6">Gokverslaafd</article>
-      </section>
+          <a href="#pgs"> <article class="circleBase circle2"> 
+            <p class="teamname"> PGS </p>  
+            <div class="teamleden"> 
+              <p>Seijno<p>
+              <p>Zoë</p> 
+              <p>Larissa</p>
+            </div>
+          </article></a>
+          <a href="#rumokaya"><article class="circleBase circle3"><p class="teamname"> RuMoKaYa </p>
+          <div class="teamleden"> 
+          <p>Rukiya<p>
+          <p>Mohammed</p> 
+          <p>Kaan</p>
+          <p>Yassir</p>
+          
+          </div>
+        
+        </article> </a>
+        <a href="#MJSS"> <article class="circleBase circle4"><p class="teamname"> MJSS </p>
+            <div class="teamleden"> 
+              <p>Jelte<p>
+              <p>Shanna</p> 
+              <p>Mohammed</p>
+              <p>Saif</p>
+            </div>
+          </article></a>
+          <a href="#slay"></a><article class="circleBase circle5"><p class="teamname"> Slay </p>  
+          <div class="teamleden"> 
+            <p>Alisa<p>
+            <p>Previen</p> 
+            <p>Rutger</p>
+          </div>
+        </article></a>
+        <a href="#gokverslaafd"><article class="circleBase circle6"><p class="teamname"> Gokverslaafd </p>
+            <div class="teamleden"> 
+              <p>Robin<p>
+              <p>Tristan</p> 
+              <p>Ellenoor</p>
+              <p>Tygo</p>
+            </div> 
+          </article></a>
+        </section>
+      </nav>
+     
+  <section class="pixelcrafters" id="pixel">
+    <header>Meet our team 
+      <br> the Pixelcrafters</header>
+    <div class="mySlides fade">
+      <article class="wrapper">
+        <div class="scroller" id="scroller1">
+          <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+            <polygon points="0 50 37 68 37 32 0 50" style="fill:#000"/>
+            <polygon points="100 50 64 32 64 68 100 50" style="fill:#000"/>
+          </svg>
+        </div>
+        <section class="before">
+          <img class="profilepic" src="assets/Squad1F-Latoya.jpg" draggable="false"/>
+        </section>
+        <section class="after">
+          <article class="about-cardla">
+            <section class="cardla-front">
+              <div class="cardla-info">
+                <h1>Latoya Nijmeijer</h1>
+                <ul>
+                  <li><i class="fa-solid fa-cake-candles fa-beat" style="color: #ffffff;"></i>22 years</li>
+                  <li><i class="fa-solid fa-house fa-bounce" style="color: #ffffff;"></i>Zaandam</li>
+                  <li><i class="fa-solid fa-school fa-fade" style="color: #ffffff;"></i> DTP and Software</li>
+                </ul>
+              </div>
+            </section>
+          </article>
+        </section>
+      </article>
+      <a href="https://latoyaln.github.io/your-tribe-profile-card/" target="_blank">
+        <button class="buttontogithub" type="button">Show me more Latoya!</button>
+      </a>
     </div>
 
-    <!--slider wrapper-->
-    <section class="squad1">
-      <div class="slider-wrapper">
-        <div class="slider">
-          <div class="slide" id="slide-1">
-            <div class="about">
-              <div class="front">
-                <div class="info">
-                  <h1>Latoya Nijmeijer</h1>
-                  <ul>
-                    <li>
-                      <i
-                        class="fa-solid fa-cake-candles fa-beat"
-                        style="color: #ffffff"
-                      ></i
-                      >22 jaar
-                    </li>
-                    <li>
-                      <i
-                        class="fa-solid fa-house fa-bounce"
-                        style="color: #ffffff"
-                      ></i
-                      >Zaandam
-                    </li>
-                    <li>
-                      <i
-                        class="fa-solid fa-school fa-fade"
-                        style="color: #ffffff"
-                      ></i>
-                      DTP en Software
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="back">
-                <img src="assets/LNLOGO.png" />
-                <p>
-                  Mijn naam is Latoya Nijmeijer. Ik ben 22 jaar en ik woon in
-                  Zaandam samen met mijn kat. Mijn laatst behaalde diploma is
-                  voor de opleiding ondernemerschap maar ik heb een achtergrond
-                  in DTP. Ook heb ik een tijdje Software Development gestudeerd.
-                </p>
-                <h1>Talen die ik ken:</h1>
-                <div class="row">
-                  <div class="col">
-                    <h2>HTML/CSS</h2>
-                  </div>
-                  <div class="col">
-                    <h2>JS</h2>
-                  </div>
-                  <div class="col">
-                    <h2>PHP</h2>
-                  </div>
-                  <div class="col">
-                    <h2>C#</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="slide" id="slide-2">
-            <div class="card">
-              <header class="tessa">
-                <h1>Tessa van der Graaf</h1>
-                <p><em></em></p>
-              </header>
-              <img src="assets/BWOB.png" alt="" width="800" height="800" />
-              <p>
-                0612345678 <br />
-                tessavdg@gmail.com
-              </p>
-            </div>
-          </div>
-          
-          
-
-          <div class="slide" id="slide-3">
-            <article class="belkacem" id="slide-3">
-              <header>
-                <h1>Ambitious frontend developer</h1>
-                <h2 id="name">Belkacem Boulanouar</h2>
-              </header>
-              <img src="assets/belk pic.jpg" alt="" width="800" height="800" />
-
-              <p>
-                Hi, I'm Belkacem and I'm 24 years old. My hobbies are playing
-                games, playing football and watching football. Lastly, I work at
-                the Lidl as a part time job.
-              </p>
-              More about me!
-              <p>
-                - I love listening to people. <br />
-                - I'm Understanding. <br />
-                - I'm an introvert. <br />
-                - I'm quite composed!
-              </p>
-            </article>
-          </div>
+    <div class="mySlides fade">
+      <article class="wrapper">
+        <div class="scroller" id="scroller2">
+          <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+            <polygon points="0 50 37 68 37 32 0 50" style="fill:#000"/>
+            <polygon points="100 50 64 32 64 68 100 50" style="fill:#000"/>
+          </svg>
         </div>
+        <section class="before">
+          <img class="profilepic" src="assets/Squad1F-Tessa.jpg" draggable="false"/>
+        </section>
+        <section class="after">
+          <div class="card">
+            <header class="tessa">
+              <h1>Tessa van der Graaf</h1>
+              <p><em></em></p>
+            </header>
+            <img src="assets/BWOB.png" alt="" width="800" height="800">
+            <p>0612345678 <br> tessavdg@gmail.com </p>
+          </div>
+        </section>
+      </article>
+      <a href="https://Tindyy.github.io/your-tribe-profile-card/" target="_blank">
+        <button class="buttontogithub" type="button">Show me more Tessa!</button>
+      </a>
+    </div>
 
-        <div class="slider-nav">
-          <a href="#slide-1"></a>
-          <a href="#slide-2"></a>
-          <a href="#slide-3"></a>
+    <div class="mySlides fade">
+      <article class="wrapper">
+        <div class="scroller" id="scroller3">
+          <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+            <polygon points="0 50 37 68 37 32 0 50" style="fill:#000"/>
+            <polygon points="100 50 64 32 64 68 100 50" style="fill:#000"/>
+          </svg>
         </div>
+        <section class="before">
+          <img class="profilepic" src="assets/Squad1F-Belkacem.jpg" draggable="false"/>
+        </section>
+        <section class="after">
+          <article class="belkacem">
+            <header>
+              <h3>Ambitious frontend developer</h3>
+              <h2 id="name">Belkacem Boulanouar</h2>
+            </header>
+            <img src="assets/belk pic.jpg" alt="" width="800" height="800">
+            <p>Hi, I'm Belkacem and I'm 24 years old. My hobbies are playing games, playing football, and watching football. Lastly, I work at the Lidl as a part-time job.</p>
+            More about me!
+            <p>- I love listening to people.
+              <br> - I'm Understanding.
+              <br> - I'm an introvert.
+              <br> - I'm quite composed! </p>
+          </article>
+        </section>
+      </article>
+      <a href="https://belkace1.github.io/your-tribe-profile-card/" target="_blank">
+        <button class="buttontogithub" type="button">Show me more Belkacem!</button>
+      </a>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- The dots/circles -->
+    <div class="slidedot">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </section>
+  <header>Gokverslaafde</header>
+  <section class="gokverslaafde" id ="gokverslaafd">
+
+        <div class="slider-wrapper">
+          <section class="slider">
+              <section class="slide" id="slide-1">
+
+                <div class="profilecards">
+                  <a href="https://robin1224.github.io/your-tribe-profile-card/"><img src="assets/RobinProfileCard.png"></a>
+                </div>
+              </section>
+              <section class="slide" id="slide-2">
+
+                <div class="profilecards">
+                  <a href="https://ebok1.github.io/your-tribe-profile-card/"><img src="assets/EllenoorProfileCard.png"></a>
+                </div>
+              </section>
+              <section class="slide" id="slide-3">
+
+                <div class="profilecards">
+                  <a href="https://tristankatte.github.io/your-tribe-profile-card/"><img src="assets/TristanProfileCard.png"></a>
+                </div>
+              </section>
+              <section class="slide" id="slide-4">
+
+                <div class="profilecards">
+                  <a href="https://tygowolven.github.io/your-tribe-profile-card/"><img src="assets/TygoProfileCard.png"></a>
+                </div>
+              </section>
+          </section>
+          <section class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+            <a href="#slide-4"></a>
+          </section>
+        </div>
+</section>
+  
+  <!------------->
+  <!--Team Mjss-->
+  <!------------->
+  <div class="container" id="2">
+
+    <header id="MJSS"> MJSS </header>
+    <div class="carousel-container">
+      <div class="carousel">
+        <!--Jelte-->
+        <div class="carousel-slide" >
+          <H1> Jelte </H1>
+          <a href=" ">
+            <img src="assets/Jelte.png" alt="Jelte" style="width:42px;height:42px;"></a>
+        </div>
+        <!--Jelte end-->
+
+        <!--Shanna-->
+        <div class="carousel-slide" >
+          <h1> Shanna </h1>
+          <a href="https://shannafdnd.github.io/your-tribe-profile-card/">
+            <img src="assets/Shanna.png" alt="Shanna" style="width:42px;height:42px;"></a>
+        </div>
+         <!--Shanna end-->
+
+         <!--Saif-->
+        <div class="carousel-slide" >
+          <h1>Saif</h1>
+          <a href="https://saif8599.github.io/your-tribe-profile-card/">
+            <img src="assets/Saif.png" alt="Saif" style="width:42px;height:42px;"></a>
+        </div>
+        <!--Saif end-->
+      
+        <!--Mohammed D-->
+       <div class="carousel-slide" >
+          <h1>Mohammed D</h1>
+          <a href="https://zortux.github.io/your-tribe-profile-card/">
+            <img src="assets/Moh.jpg" alt="Mohammed D" style="width:42px;height:42px;"></a>
+       </div>
+        <!--Mohammed D end-->
+        
+
       </div>
-    </section>
+        
+    </div>
+            
+    <!---Buttons--->
+    <button class="prev-button"> previous</button>
+    <button class="next-button">Next</button>
 
-    <script src="scripts/script.js"></script>
-  </body>
+
+  </div>
+  <!------------->
+  <!--Team Slay-->
+  <!------------->
+  <div class="container" id="3">
+
+    <header id="slay"> Slay </header>
+    <div class="carousel-container">
+      <div class="carousel">
+        <!--Alisa-->
+        <div class="carousel-slide" >
+          <H1> Alisa </H1>
+          <a href="https://aliceafanasieva.github.io/your-tribe-profile-card/ ">
+            <img src="assets/Alisa.jpg" alt="Alisa" style="width:42px;height:42px;"></a>
+        </div>
+        <!--Alisa end-->
+
+        <!--Rutger-->
+        <div class="carousel-slide" >
+          <h1> Rutger </h1>
+          <a href=" https://rutgerkock.github.io/your-tribe-profile-card/">
+            <img src="assets/Rutger.jpg" alt="Rutger" style="width:42px;height:42px;"></a>
+        </div>
+         <!--Rutger end-->
+
+         <!--Previen-->
+        <div class="carousel-slide" >
+          <h1>Previen</h1>
+          <a href="https://prz6.github.io/your-tribe-profile-card/ ">
+            <img src="assets/Previen.jpg" alt="Previen" style="width:42px;height:42px;"></a>
+        </div>
+        <!--Previen end-->
+      </div>
+    </div>
+
+    <!---Buttons--->
+    <button class="prev-button"> previous</button>
+    <button class="next-button">Next</button>
+
+
+  </div>
+
+  <!----------------->
+  <!--Team RuMoKaYa-->
+  <!----------------->
+
+  <div class="container" id="4">
+
+    <header id="rumokaya"> RuMoKaYa</header>
+    <div class="carousel-container">
+      <div class="carousel">
+        <!--Rukiya-->
+        <div class="carousel-slide">
+          <H1> Rukiya </H1>
+          <a href=" https://rukiyatossou.github.io/your-tribe-profile-card/">
+            <img src="assets/Rukiya.png" alt="Rukiya" style="width:42px;height:42px;"></a>
+        </div>
+        <!--Rukiya end-->
+
+        <!--Kaan-->
+        <div class="carousel-slide">
+          <h1> Kaan </h1>
+          <a href=" https://kaankalmi.github.io/your-tribe-profile-card/">
+            <img src="assets/Kaan.png" alt="Kaan" style="width:42px;height:42px;"></a>
+        </div>
+         <!--Kaan end-->
+
+         <!--Mohammed-->
+        <div class="carousel-slide">
+          <h1>Mohammed</h1>
+          <a href=" ">
+            <img src="assets/Mohammed.png" alt="Mohammed" style="width:42px;height:42px;""></a>
+        </div>
+        <!--Mohammed end-->
+      
+
+          <!--Yassir-->
+          <div class="carousel-slide">
+            <h1>Yassir</h1>
+            <a href=" https://yassirog.github.io/your-tribe-profile-card/">
+              <img src="assets/yassir.jpg" alt="Yassir" style="width:42px;height:42px;"></a>
+          </div>
+          <!--Yassir end-->
+        </div>
+    </div>
+
+    <!---Buttons--->
+    <button class="prev-button"> previous</button>
+    <button class="next-button">Next</button>
+
+
+  </div>
+        
+  <script src="scripts/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+
+
 </html>
