@@ -2,7 +2,13 @@
 *{
   margin:0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+
+}
+.pixelcrafters{
+  height: 100vh;
+}
+.gokverslaafde{
+  height: 100vh;
 }
 
 
@@ -37,14 +43,6 @@
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-/* name text*/
-.name {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-
-}
 
 /* The dots/bullets/indicators */
 .dot {
@@ -60,6 +58,11 @@
 
 .active, .dot:hover {
   background-color: #717171;
+}
+
+/* Other existing styles for your slides and scroller */
+.slidedot{
+  text-align:center;
 }
 
 /* Fading animation */
@@ -130,10 +133,6 @@
   height: 100%;
   padding: 5px;
 }
-
-/* Other existing styles for your slides and scroller */
-
-
 .scroller:hover{
   opacity:1;
 }
@@ -185,9 +184,11 @@
   color: #fff;
   background: #111;
   cursor: pointer;
-  position: relative;
-  z-index: 0;
   border-radius: 10px;
+  position: absolute;
+  bottom: 0.5px;
+  right: 250px; 
+  z-index: 2;
 }
 
 .glow-on-hover:before {
@@ -236,11 +237,12 @@
   100% { background-position: 0 0; }
 }
 
-/*Hier zorg ik ervoor dat mijn visitekaartje zelf afgeronde hoeken heeft.
-Ook heb ik een schaduw achter het visitekaartje om hem iets naar voor te brengen
-Met transition zorg ik ervoor dat de kaart 1.5 seconde duurt om te flippen
-Tranform style preserve 3d zorgt ervoor dat de kaart gepositioneert wordt in de 3d space 
-en niet plat komt*/
+
+/*Here I make sure that my business card itself has rounded corners.
+I also have a shadow behind the business card to bring it out a bit
+With transition I ensure that the card takes 1.5 seconds to flip
+Transform style preserve 3D ensures that the card is positioned in the 3D space
+and does not come flat*/
 .about-cardla {
   width: 50vw;
   height: 43vh;
@@ -255,23 +257,17 @@ en niet plat komt*/
   font-family: "Poppins", sans-serif;
 }
 
-/*De positie absolute zorgt ervoor dat positie absoluut zo blijft. Backface visibility
-zorgt ervoor dat de achterkant ontzichtbaar blijft*/
-.cardla-front,
-.cardla-back {
+/*The absolute position ensures that the position remains absolute/ the same*/
+.cardla-front {
   width: 100%;
   height: 100%;
   border-radius: 15px;
   position: absolute;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
 
-/*Bij backround zorg ik ervoor dat mijn afbeelding als achtergrond komt.
-Met display flex zorg ik ervoor dat de elementen in 1 lijn blijven
-Met justify content zorg ik dsat de flex items lijnen aan de rechter eind*/
+/*With backround I ensure that my image is used as a background.
+With display flex I ensure that the elements remain in one line
+With justify content I ensure that the flex items lines at the right end*/
 .cardla-front {
   background-image: url("https://i.ibb.co/tb5BnBF/backgroundswirls.jpg");
   background-size: cover;
@@ -286,6 +282,7 @@ Met justify content zorg ik dsat de flex items lijnen aan de rechter eind*/
 }
 .cardla-front h1 {
   font-weight: 400;
+  font-size: 1rem;
 }
 .cardla-front p {
   font-size: 0.7em;
@@ -295,7 +292,7 @@ Met justify content zorg ik dsat de flex items lijnen aan de rechter eind*/
   border-bottom-right-radius: 25px;
   background-color: #004526;
 }
-/*Hier zorg ik ervoor dat mijn lijst items geen icons voor de tekst krijgen en op 1 lijn staan*/
+/*Here I ensure that my list items do not have icons in front of the text and are on 1 line*/
 .cardla-front ul {
   list-style: none;
   display: flex;
@@ -409,14 +406,8 @@ dd:nth-of-type(2){
   width: 100%;
   margin-top: 0;
   padding: 3rem 2rem;
-  
   text-align: center;
   background: #eeeed2;
-}
-/* Add a hover effect to the card element in the second mySlides */
-.mySlides:nth-child(2) .card:hover {
-  transform: perspective(1000px) rotateX(-15deg) rotateY(15deg);
-  /* Add any other styles you want for the hover effect */
 }
 
 
@@ -442,8 +433,15 @@ dd:nth-of-type(2){
   
   
 }
+.belkacem h2{
+  color: rgb(9, 255, 0);
+  margin-left: 30px;
+  font-family: open sans;
+  color: #10214e;
+  
+}
 
-.belkacem h1 {
+.belkacem h3 {
   
   color: rgb(9, 255, 0);
 
