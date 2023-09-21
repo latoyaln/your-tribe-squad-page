@@ -1,109 +1,239 @@
-body {
-  background-color: #f8fafc;
-  margin: 0;
+
+*{
+  margin:0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.nav-bar {
-  background: #959090;
-  color: white;
-  display: flex;
-  position: fixed;
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #223030;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* name text*/
+.name {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* Our wrapper */
+.wrapper{
+  width: 70vw;
+  height: 600px;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate3d(-50%,-50%,0);
+  overflow:hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/* Our image information */
+.before,
+.after {
+  width:100%;
+  height:100%;
+  background-repeat:no-repeat;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top:0;
+  left:0;
+  pointer-events:none;
   overflow: hidden;
-  top: 0;
-  width: 100vw;
-  }
-  
-  .logonav {
-      width: 125px;         
-      height: 125px;
-      border-radius: 50%;
-      flex-direction: column;
-      margin-top: 60px;
-      margin-right:250px;
-      }
-  .allCircles {
-      display:flex;
-      
-  }
-  .circleBase {
-          border-radius: 50%;
-          Margin: 25px;
-          margin-top: 20px;
-          text-align: center;
-          font-size: 35px;
-          line-height: 200px;
-          width: 200px;
-          height: 200px;
-          background: #0d8d62;
-          border: 1px solid #000;
-        }
-
-.squad1{
-  margin-top: 30rem;
 }
 
-.slider-wrapper {
-  height: 80vh;
-  display: flex;
-  flex-direction: column; /* Stack child elements vertically */
-  justify-content: center; 
-  align-items: center;
-  overflow: hidden; /* Hide overflowing content within the slider */
-}
-.slider {
-  display: flex;
-  aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  border-radius: 0.5rem; /* Rounded corners */
+.profilepic{
+  height:100%;
 }
 
-.slider-nav {
-  display: flex;
-  column-gap: 1rem; /* Space between dots */
-  justify-content: center; 
-  z-index: 1; /* Appear above other content */
+.after{
+  width:125px;
 }
 
-.slider-nav a {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%; 
-  background-color: #000; 
-  opacity: 0.75; 
-  transition: opacity ease 250ms; 
+/* Add styles for the scroller */
+.scroller {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 100px; /* Adjust the position as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0.9;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 1; /* Ensure the scroller is above the slides */
 }
 
-/* Increase opacity when hovering over navigation dots */
-.slider-nav a:hover {
+/* Add styles for the scroller thumb if necessary */
+.scroller__thumb {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+/* Other existing styles for your slides and scroller */
+
+
+.scroller:hover{
+  opacity:1;
+}
+
+.scrolling{
+  pointer-events:none;
+  opacity:1;
+  z-index: 1;
+}
+
+.scroller__thumb{
+  width:100%;
+  height:100%;
+  padding:5px;
+}
+
+.scroller:before,
+.scroller:after{
+  content:" ";
+  display: block;
+  width: 7px;
+  height: 9999px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.5px;
+  z-index: 30;
+  transition:0.1s;
+}
+.scroller:before{
+  top:100%;
+}
+.scroller:after{
+  bottom:100%;
+}
+
+
+.scroller{
+  border: 5px solid #000;
+}
+.scroller:before,
+.scroller:after{
+  background: #000;
+}
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
   opacity: 1;
 }
 
-/* Styling for individual slides within the slider */
-.slide {
-  position: relative; /* Relative position for content within slides */
-  flex: 0 0 100%; /* Make each slide take up the full width */
-  min-width: 100%;
-  height: 100%; 
-  scroll-snap-align: start; /* Snap to the start of each slide */
-  overflow-y: auto; /* Vertical scrolling for content */
-  padding: 5rem; 
-
-}
-
-/* Show only the active slide */
-.slide.active {
-  visibility: visible; 
-  opacity: 1; 
-}
-  
- /*dit zorgt ervoor dat de container waar mijn visite kaartje in is een padding van 10 heeft*/
-.container-cardla {
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
   width: 100%;
-  min-height: 100vh;
-  padding: 10px;
-  font-family: "Poppins" , sans-serif;;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }
 
 /*Hier zorg ik ervoor dat mijn visitekaartje zelf afgeronde hoeken heeft.
@@ -122,6 +252,7 @@ en niet plat komt*/
   transition: transform 1.5s;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  font-family: "Poppins", sans-serif;
 }
 
 /*De positie absolute zorgt ervoor dat positie absoluut zo blijft. Backface visibility
@@ -178,192 +309,181 @@ Met justify content zorg ik dsat de flex items lijnen aan de rechter eind*/
 .cardla-front li i {
   padding-right: 15px;
 }
-/*Met transform rotate zorg ik ervoor dat het element rotate*/
-.cardla-back {
-  background: #fff;
-  color: #333;
-  padding: 20px 40px;
-  transform: rotateY(180deg);
-}
+/* Responsive style for mobile (S) screens */
+@media (max-width: 900px) {
+  .about-cardla {
+    width: 100%; 
+    height: 50vh; 
+  }
 
-/* Styles for the flipped card */
-.about-cardla.flipped {
-  transform: rotateY(180deg);
-}
+  .cardla-front {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 0.8rem;
+  }
 
-.cardla-back img {
-  max-width: 15%;
+  .cardla-front h1 {
+    font-size: 1rem; 
+  }
+  .cardla-front .cardla-info {
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+  }
+
+  .cardla-front ul {
+    flex-direction: column;
+  }
 }
-.cardla-back p {
-  font-size: 0.8em;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-.cardla-back p .talenln {
-  font-size: 1.5em;
-  font-weight: 800;
-}
-.row {
-  display: flex;
-  align-items: center;
-}
-/*Hier kies ik ervoor om row en col te gebruiken om mijn tekst in 1 rij en column te zetten*/
-.row h2 {
-  flex: 1;
-  text-align: center;
-  color: #004526;
-  font-size: 0.8em;
+.card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50vw;
+  max-width: 25em;
+  min-width: 20em;
+/* From https://css.glass */
+background: rgba(238, 238, 210, 0.39);
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.8px);
+-webkit-backdrop-filter: blur(10.8px);
+border: 1px solid rgba(238, 238, 210, 0.12);
 }
-/*Hier zet ik streepjes tussen de verschillende col elementen*/
-.row h2:not(:last-child)::after {
-  content: "";
-  width: 0.1em;
-  height: 1em;
-  background: #004526;
-  position: absolute;
-  top: 0.4em;
-  right: 0;
-}
-/*flipt de kaart bij hover*/
 
-.container-cardla:hover .about-cardla {
-  transform: rotateY(180deg);
+.tessa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-  .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    width: 50vw;
-    max-width: 25em;
-    min-width: 20em;
-  /* From https://css.glass */
-  background: rgba(238, 238, 210, 0.39);
-  
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10.8px);
-  -webkit-backdrop-filter: blur(10.8px);
-  border: 1px solid rgba(238, 238, 210, 0.12);
-  }
-  
-  .tessa {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  
-  .tessa h1 {
-    margin: 2rem 0 1rem;
-    color: #000000;
-  }
-  
-  
-  .card img {
-    position: relative;
-    top: 2rem;
-    width: 120px;
-    height: 200px;
-    transition: .25s .15s;
-  }
-  
-  
-  dt {
-    margin-top: .25rem;
-    padding-top: .25rem;
-    border-top: 1px solid rgba(0,0,0,0.3);
-    font-weight: bold;
-  }
-  dt:nth-of-type(1) {
-    grid-area: html-dt;
-  }
-  dt:nth-of-type(2) {
-    grid-area: css-dt;
-    transform: translateY(1rem);
-  }
-  dt:nth-of-type(3) {
-    grid-area: js-dt;
-  }
-  
-  dd {
-    margin: 0;
-    padding-left: .3rem;
-    transition: .25s .3s;
-  }
-  dd:nth-of-type(2){  
-    transform: translateY(1rem);
-  }
-  
- .card p { 
-    margin: 0;
-  }
-  
-  .card > p {
-    width: 100%;
-    margin-top: 0;
-    padding: 3rem 2rem;
-    
-    text-align: center;
-    background: #eeeed2;
-  }
+.tessa h1 {
+  margin: 2rem 0 1rem;
+  color: #000000;
+}
 
-  .belkacem {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    width: 50vw;
-    max-width: 25em;
-    min-width: 20em;
-    border-radius: 1rem;
-    background: rgb(0,239,255);
-    background: linear-gradient(0deg, rgba(0,239,255,1) 40%, #4e54c8 100%);
-    box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
-    transition: .25s;
-  }
-  
-  .belkacem header {
-    text-align: left;
-    margin-left: -10px
-    
-    
-  }
-  
- .belkacem h1 {
-    
-    color: rgb(9, 255, 0);
-  
-  }
-  
- .belkacem img {
-    position: relative;
-    top: -2rem;
-    right: -7rem;
-    width: 10em;
-    height: auto;
-    border: 2px solid #fff;
-    border-radius: 10em;
-    box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
-    transition: .25s .15s;
-  }
-  .belkacem p { 
-    margin: 0;
-  }
-  
-  .belkacem > p {
-    width: 100%;
-    margin-top: 0;
-    padding: 3rem 2rem;
-    border-radius: 0 0 1rem 1rem;
-    background: rgba(255,255,255, 0.5);
-  }
 
-  .profilecards{
-    width: 100%;
-    min-height: 100vh;
+.card img {
+  position: relative;
+  top: 2rem;
+  width: 120px;
+  height: 200px;
+  transition: .25s .15s;
+}
+
+
+dt {
+  margin-top: .25rem;
+  padding-top: .25rem;
+  border-top: 1px solid rgba(0,0,0,0.3);
+  font-weight: bold;
+}
+dt:nth-of-type(1) {
+  grid-area: html-dt;
+}
+dt:nth-of-type(2) {
+  grid-area: css-dt;
+  transform: translateY(1rem);
+}
+dt:nth-of-type(3) {
+  grid-area: js-dt;
+}
+
+dd {
+  margin: 0;
+  padding-left: .3rem;
+  transition: .25s .3s;
+}
+dd:nth-of-type(2){  
+  transform: translateY(1rem);
+}
+
+.card p { 
+  margin: 0;
+}
+
+.card > p {
+  width: 100%;
+  margin-top: 0;
+  padding: 3rem 2rem;
+  
+  text-align: center;
+  background: #eeeed2;
+}
+/* Add a hover effect to the card element in the second mySlides */
+.mySlides:nth-child(2) .card:hover {
+  transform: perspective(1000px) rotateX(-15deg) rotateY(15deg);
+  /* Add any other styles you want for the hover effect */
+}
+
+
+.belkacem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50vw;
+  max-width: 25em;
+  min-width: 20em;
+  border-radius: 1rem;
+  background: rgb(0,239,255);
+  background: linear-gradient(0deg, rgba(0,239,255,1) 40%, #4e54c8 100%);
+  box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
+  transition: .25s;
+}
+
+.belkacem header {
+  text-align: left;
+  margin-left: -10px
+  
+  
+}
+
+.belkacem h1 {
+  
+  color: rgb(9, 255, 0);
+
+}
+
+.belkacem img {
+  position: relative;
+  top: -2rem;
+  right: -7rem;
+  width: 10em;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: 10em;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
+  transition: .25s .15s;
+}
+.belkacem p { 
+  margin: 0;
+}
+
+.belkacem > p {
+  width: 100%;
+  margin-top: 0;
+  padding: 3rem 2rem;
+  border-radius: 0 0 1rem 1rem;
+  background: rgba(255,255,255, 0.5);
+}
+
+.profilecards{
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+@media (min-width: 900px) {
+  .before {
+    display: block;
   }
+  .profilepic {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+  }
+}
