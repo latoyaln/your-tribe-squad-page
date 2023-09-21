@@ -1,6 +1,10 @@
+*{font-family: "Poppins", sans-serif;
+
+}
+
 .nav-bar {
-    background: #959090;
-    color: white;
+    background: #223030;
+    color: #223030;
     display: flex;
     position: fixed;
     overflow: hidden;
@@ -9,7 +13,7 @@
     margin:0;
     
     }
-    
+    /* image position and form*/
     img {
         width: 125px;         
         height: 125px;
@@ -17,30 +21,35 @@
         flex-direction: column;
         margin-right:450px;
         }
+
     .allCircles {
         display:flex;
         
     }
+    /*teamnaam text position*/
     .teamname{
       text-align: center;
       line-height: 100px;
     }
+    /*circle position and form*/
     .circleBase {
             border-radius: 50%; 
             Margin-right: 150px;
             font-size: 20px;
             width: 125px;
             height: 125px;
-            background: #0d8d62;
+            background: #EFEFE9;
             border: 1px solid #000;
           }
 
-
+/*teamleden displayen als je hovert*/
 
           .teamleden-circle1 { 
             display: none;
             text-align: center;
             font-size: 15px;
+            line-height: 4px; 
+           
             
           }
         p:hover + .teamleden-circle1{
