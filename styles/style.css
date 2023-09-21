@@ -1,18 +1,25 @@
+/*It is nice to have agreements on the overal layout, structure and colorscheme so you'll already know 
+what to work towards*/
 
 * { 
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "poppins",sans-serif;
   background-color: #EFEFE9;
-  box-sizing: border-box;
   color: #223030;
   
 }
 
+/* Using the * for universal selector*/
+/*After the Universal selctor we move on to the main classes we made in the index.HTML
+where every container used the same <div class =" ..."> but can be teared apart by their id's*/
+/*But for maintanance to the overal structure and layout we use the main divs of the index.HTML*/
+/*Whereas later on in style.css we can go more in the depths of the different teams*/
 
 .carousel-container {
   width: 100%;
   perspective: 1000px;
   overflow: hidden;
   display: inline-flex;
+  justify-content: center;
 }
 
 .carousel {
@@ -28,177 +35,77 @@
   transform: translateZ(-200px);
   transition: transform 0.5s;
   color: #223030;
-  border-radius: 25px;
   margin-left: 10px;
   margin-right: 10px;
 
 }
 
 .carousel-slide img{
-  max-width: 25%;
+  max-width: 50%;
   height: auto;
   margin-left: 150px;
   align-self: center;
+  background-color: inherit;
+ 
 }
 
 .carousel-slide h1{
   text-align: center;
-  background-color: #959090;
+  background-color: inherit;
+  font-size: 7vw;
+
 }
 
 .carousel-slide:nth-child(odd) {
   background-color: #959090;
-}
-
-.carousel-slide:nth-child(even) {
-  background-color: #959090;
-}
-
-.carousel-slide.active {
-  transform: translateZ(0);
-}
-
-.prev-button,
-.next-button {
-  margin-top: 10px;
-  align-items: center;
-}
-  
-/*---mjss---*/
-
-.carousel {
-  display: flex;
-  transition: transform 0.5s;
-  
-}
-
-.carousel-slide {
-  flex: 1;
-  min-width: 100%;
-  transform-style: preserve-3d;
-  transform: translateZ(-200px);
-  transition: transform 0.5s;
-  color: #223030;
   border-radius: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.carousel-slide img{
-  max-width: 25%;
-  height: auto;
-  margin-left: 150px;
-  align-self: center;
-}
-
-
-
-.carousel-slide:nth-child(odd) {
-  background-color: #959090;
 }
 
 .carousel-slide:nth-child(even) {
   background-color: #959090;
-}
-
-.carousel-slide.active {
-  transform: translateZ(0);
-}
-
-.prev-button,
-.next-button {
-  margin-top: 10px;
-  align-items: center;
-}
-
-/*---slay---*/
-
-.carousel {
-  display: flex;
-  transition: transform 0.5s;
-  
-}
-
-.carousel-slide {
-  flex: 1;
-  min-width: 100%;
-  transform-style: preserve-3d;
-  transform: translateZ(-200px);
-  transition: transform 0.5s;
-  color: #223030;
   border-radius: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
-
-}
-
-.carousel-slide img{
-  max-width: 25%;
-  height: auto;
-  margin-left: 150px;
-  align-self: center;
-}
-
-
-.carousel-slide:nth-child(odd) {
-  background-color: #959090;
-}
-
-.carousel-slide:nth-child(even) {
-  background-color: #959090;
 }
 
 .carousel-slide.active {
   transform: translateZ(0);
 }
 
+/*Here we can modify the button(s) to our liking*/
+/*by selecting both buttons we don't have to copy and paste the same exact code from one button onto another
+and instead work on both at the same time*/
 .prev-button,
 .next-button {
   margin-top: 10px;
   align-items: center;
 }
 
-/*---RuMoKaYa---*/
+/* Responsive styles for smaller screens */
 
-.carousel  {
-  display: flex;
-  transition: transform 0.5s;
+@media screen and (max-width: 768px) {
+  .carousel-slide h1 {
+    font-size: 3vw; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel-slide h1 {
+    font-size: 2vw; /* Further adjust font size for even smaller screens */
+  }
+}
+
+/*From this point on we can move to working per team to improve the layout and design*/
   
-}
+/*--Pixelcrafters---*/
 
-.carousel-slide {
-  flex: 1;
-  min-width: 100%;
-  transform-style: preserve-3d;
-  transform: translateZ(-200px);
-  transition: transform 0.5s;
-  color: #223030;
-  border-radius: 25px;
-  margin-left: 10px;
 
-}
 
-.carousel-slide img{
-  max-width: 25%;
-  height: auto;
-  margin-left: 150px;
-  align-self: center;
-}
+/*-------mjss-------*/
 
-.carousel-slide:nth-child(odd) {
-  background-color: #959090;
-}
 
-.carousel-slide:nth-child(even) {
-  background-color: #959090;
-}
 
-.carousel-slide.active {
-  transform: translateZ(0);
-}
+/*-------slay-------*/
 
-.prev-button,
-.next-button {
-  margin-top: 10px;
-  align-items: center;
-}
+
+
+/*-----RuMoKaYa-----*/
+
