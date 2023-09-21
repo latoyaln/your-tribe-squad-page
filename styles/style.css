@@ -15,20 +15,26 @@ body header{
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   color: #223030;
+  text-align: center;
+  margin-top: 45px;
 }
-
+/*start nav bar*/
+ nav{
+  position: fixed;
+ }
 .nav-bar {
-  font-family: "Poppins", sans-serif;
+   font-family: "Poppins", sans-serif;
   background: #223030;
   color: #223030; /* Change text color to white */
   display: flex;
   justify-content: space-between; /* To align logo and circles at the ends */
   align-items: center; /* To vertically center everything */
-  position: absolute; 
-  top: 0;
-  left: 0; /* Set to 0 to make it full width */
-  right: 0; /* Set to 0 to make it full width */
-  z-index: 10;
+  position: fixed; /* Change this from absolute to fixed */
+  top: 0; /* Stick it at the top of the viewport */
+  left: 0;
+  right: 0;
+  width: 100%; /* Make it full width */
+  z-index: 1000; /* Adjust the z-index value as needed */
 }
 
 
@@ -61,7 +67,27 @@ body header{
   justify-content: center; /* Center text vertically */
   position: relative; /* Add relative positioning for .teamleden */
 }
-
+  /*this shows the circles in mobile*/
+  @media screen and (max-width:768px) {
+  
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    
+    .allCircles {
+      gap: 2px;
+    }
+    .circleBase { width: 50px;
+      height: 50px;
+      font-size: 7px;
+    }
+  
+    .teamleden {font-size: 7px;
+  
+    }
+  }
 /*teamleden displayen als je hovert*/
 
 .teamleden {
@@ -91,7 +117,6 @@ p:hover + .teamleden{
   display: flex;
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
-  margin-top: 50px;
   height: 100vh;
 }
 
@@ -144,7 +169,6 @@ p:hover + .teamleden{
   background-color: #223030;
   border-radius: 50%;
   display: flex;
-  
   top: 0;
   transition: background-color 0.6s ease;
 }
@@ -499,8 +523,8 @@ dd:nth-of-type(2){
 
 .belkacem header {
   text-align: left;
-  margin-left: -10px
-  
+  margin-left: 10px;
+  font-size: 1rem;
   
 }
 .belkacem h2{
@@ -508,6 +532,7 @@ dd:nth-of-type(2){
   margin-left: 30px;
   font-family: open sans;
   color: #10214e;
+  font-size: 1rem;
   
 }
 
