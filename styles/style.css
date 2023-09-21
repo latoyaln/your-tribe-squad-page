@@ -17,9 +17,8 @@ where every container used the same <div class =" ..."> but can be teared apart 
 .carousel-container {
   width: 100%;
   perspective: 1000px;
-  overflow: hidden;
+  overflow: visible;
   display: inline-flex;
-  justify-content: center;
 }
 
 .carousel {
@@ -35,16 +34,14 @@ where every container used the same <div class =" ..."> but can be teared apart 
   transform: translateZ(-200px);
   transition: transform 0.5s;
   color: #223030;
-  margin-left: 10px;
-  margin-right: 10px;
 
 }
 
 .carousel-slide img{
   max-width: 50%;
   height: auto;
-  margin-left: 150px;
-  align-self: center;
+  justify-content: flex-end;
+  align-items: center;
   background-color: inherit;
  
 }
