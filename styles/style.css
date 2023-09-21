@@ -15,7 +15,6 @@
         height: 125px;
         border-radius: 50%;
         flex-direction: column;
-        margin-top: 20px;
         margin-right:450px;
         }
     .allCircles {
@@ -27,8 +26,8 @@
       line-height: 100px;
     }
     .circleBase {
-            border-radius: 50%;
-            Margin: 25px;
+            border-radius: 50%; 
+            Margin-right: 150px;
             font-size: 20px;
             width: 125px;
             height: 125px;
@@ -36,6 +35,18 @@
             border: 1px solid #000;
           }
 
+
+
+          .teamleden-circle1 { 
+            display: none;
+            text-align: center;
+            font-size: 15px;
+            
+          }
+        p:hover + .teamleden-circle1{
+            display: block;
+        
+        }       
 
 
   .teamleden-circle2 { 
